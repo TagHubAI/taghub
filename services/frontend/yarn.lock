@@ -83,13 +83,6 @@
     jsonc-eslint-parser "^2.1.0"
     yaml-eslint-parser "^1.0.1"
 
-"@antfu/utils@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.3.0.tgz#6306c43b52a883bd8e973e3ed8dd64248418bcc4"
-  integrity sha512-UU8TLr/EoXdg7OjMp0h9oDoIAVr+Z/oW9cpOxQQyrsz6Qzd2ms/1CdWx8fl2OQdFpxGmq5Vc4TwfLHId6nAZjA==
-  dependencies:
-    "@types/throttle-debounce" "^2.1.0"
-
 "@antfu/utils@^0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.5.2.tgz#8c2d931ff927be0ebe740169874a3d4004ab414b"
@@ -982,6 +975,13 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/debug@^4.1.7":
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
+  integrity sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==
+  dependencies:
+    "@types/ms" "*"
+
 "@types/eslint@^8.4.2":
   version "8.4.5"
   resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-8.4.5.tgz#acdfb7dd36b91cc5d812d7c093811a8f3d9b31e4"
@@ -1058,6 +1058,11 @@
   dependencies:
     "@types/unist" "*"
 
+"@types/ms@*":
+  version "0.7.31"
+  resolved "https://registry.yarnpkg.com/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
+  integrity sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==
+
 "@types/node@*":
   version "18.0.3"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.0.3.tgz#463fc47f13ec0688a33aec75d078a0541a447199"
@@ -1097,11 +1102,6 @@
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
   integrity sha512-7NQmHra/JILCd1QqpSzl8+mJRc8ZHz3uDm8YV1Ks9IhK0epEiTw8aIErbvH9PI+6XbqhyIQy3462nEsn7UVzjQ==
-
-"@types/throttle-debounce@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@types/throttle-debounce/-/throttle-debounce-2.1.0.tgz#1c3df624bfc4b62f992d3012b84c56d41eab3776"
-  integrity sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==
 
 "@types/unist@*", "@types/unist@^2.0.2":
   version "2.0.6"
@@ -2869,6 +2869,13 @@ espree@^9.0.0, espree@^9.3.1, espree@^9.3.2:
     acorn-jsx "^5.3.2"
     eslint-visitor-keys "^3.3.0"
 
+esprima-extract-comments@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/esprima-extract-comments/-/esprima-extract-comments-1.1.0.tgz#0dacab567a5900240de6d344cf18c33617becbc9"
+  integrity sha512-sBQUnvJwpeE9QnPrxh7dpI/dp67erYG4WXEAreAMoelPRpMR7NWb4YtwRPn9b+H1uLQKl/qS8WYmyaljTpjIsw==
+  dependencies:
+    esprima "^4.0.0"
+
 esprima@^4.0.0, esprima@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
@@ -2967,6 +2974,14 @@ extend-shallow@^2.0.1:
   integrity sha512-zCnTtlxNoAiDc3gqY2aYAWFx7XWWiasuF2K8Me5WbN8otHKTUKBwjPtNpRs/rbUZm7KxWAaNj7P1a/p52GbVug==
   dependencies:
     is-extendable "^0.1.0"
+
+extract-comments@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/extract-comments/-/extract-comments-1.1.0.tgz#b90bca033a056bd69b8ba1c6b6b120fc2ee95c18"
+  integrity sha512-dzbZV2AdSSVW/4E7Ti5hZdHWbA+Z80RJsJhr5uiL10oyjl/gy7/o+HI1HwK4/WSZhlq4SNKU3oUzXlM13Qx02Q==
+  dependencies:
+    esprima-extract-comments "^1.1.0"
+    parse-code-context "^1.0.0"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
@@ -4300,7 +4315,7 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
-json5@^2.2.0, json5@^2.2.1:
+json5@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.1.tgz#655d50ed1e6f95ad1a3caababd2b0efda10b395c"
   integrity sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==
@@ -4910,6 +4925,11 @@ parent-module@^1.0.0:
   integrity sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==
   dependencies:
     callsites "^3.0.0"
+
+parse-code-context@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/parse-code-context/-/parse-code-context-1.0.0.tgz#718c295c593d0d19a37f898473268cc75e98de1e"
+  integrity sha512-OZQaqKaQnR21iqhlnPfVisFjBWjhnMl5J9MgbP8xC+EwoVqbXrq78lp+9Zb3ahmLzrIX5Us/qbvBnaS3hkH6OA==
 
 parse-entities@^2.0.0:
   version "2.0.0"
@@ -6089,17 +6109,20 @@ vite-plugin-eslint@^1.6.1:
     "@types/eslint" "^8.4.2"
     rollup "^2.70.2"
 
-vite-plugin-pages@^0.18.2:
-  version "0.18.2"
-  resolved "https://registry.yarnpkg.com/vite-plugin-pages/-/vite-plugin-pages-0.18.2.tgz#b214f7a166e74dd55adc90a5e774c6543c3abdb3"
-  integrity sha512-Z6ylvMKYSiCngtSpWw9pHN4UzjMQvOG7f0RtLMDKm1LrO5iye7V8BS8Rfdvrl9Nz+D2W+i0pi98+vOL5VsmTvQ==
+vite-plugin-pages@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pages/-/vite-plugin-pages-0.25.0.tgz#ebaff80a368301df738dbd6cdc8e529c4d6ddca7"
+  integrity sha512-q0SX2iSw0UrTnivkzsPb19ZxamShq1nE/e/CKOe8+uVg70/e14uJuzKnw7dZ2omPjmV9Lhks38nzJL6RDRGmeA==
   dependencies:
-    "@antfu/utils" "^0.3.0"
-    debug "^4.3.2"
+    "@types/debug" "^4.1.7"
+    debug "^4.3.4"
     deep-equal "^2.0.5"
-    fast-glob "^3.2.7"
-    json5 "^2.2.0"
-    yaml "^2.0.0-8"
+    extract-comments "^1.1.0"
+    fast-glob "^3.2.11"
+    json5 "^2.2.1"
+    local-pkg "^0.4.1"
+    picocolors "^1.0.0"
+    yaml "^2.1.1"
 
 vite-plugin-vue-layouts@^0.6.0:
   version "0.6.0"
@@ -6558,7 +6581,7 @@ yaml-eslint-parser@^1.0.0, yaml-eslint-parser@^1.0.1:
     lodash "^4.17.21"
     yaml "^2.0.0"
 
-yaml@^2.0.0, yaml@^2.0.0-8, yaml@^2.1.1:
+yaml@^2.0.0, yaml@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.1.1.tgz#1e06fb4ca46e60d9da07e4f786ea370ed3c3cfec"
   integrity sha512-o96x3OPo8GjWeSLF+wOAbrPfhFOGY0W00GNaxCDv+9hkcDJEnev1yh8S7pgHF0ik6zc8sQLuL8hjHjJULZp8bw==
