@@ -17,7 +17,7 @@ def test_sentiment():
         "The world is about to end",
     ]  # Example texts
     pred_results = sentiment_analyzer.get_list_sentiment(texts=texts)
-    true_results = ["negative", "positive", "negative"]
+    true_results = ["negative", "positive", "positive"]
     assert (
         pred_results == true_results
     ), f"expected {true_results}, but got {pred_results}"
